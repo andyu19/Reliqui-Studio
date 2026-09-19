@@ -26,7 +26,7 @@ The installer includes the tool, a clean copy of the base engine and an overworl
 | [![Content translator](docs/screenshots/translator.png)](docs/screenshots/translator.png) | [![Map autosave](docs/screenshots/autosave.png)](docs/screenshots/autosave.png) |
 | **Content translator** — every map dialogue in one table | **Map autosave** — opt-in, with the interval you choose |
 
-<sub>The interface ships in six languages; these shots were taken in Spanish.</sub>
+<sub>Click any shot to see it full size. The interface ships in six languages.</sub>
 
 Interface available in **English, Spanish, German, French, Portuguese and Italian** (language selector right in the sidebar; adding another language is just a translation file, no recompiling).
 
