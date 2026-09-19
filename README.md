@@ -13,9 +13,41 @@ The installer includes the tool, a clean copy of the base engine and an overworl
 
 📖 Guides and reference live in the [Wiki](../../wiki).
 
+## Screenshots
+
+<!--
+  TO PUBLISH THE SCREENSHOTS: drop the PNG files into docs/screenshots/ with these exact
+  names and delete this comment's opening and closing markers. Nothing else to change.
+
+| | |
+|---|---|
+| ![Map editor](docs/screenshots/map-editor.png) | ![Tileset and autotile dialog](docs/screenshots/tileset-autotiles.png) |
+| **Map editor** — up to 8 layers, rectangle brush, autotile borders | **🧱 Tileset dialog** — swap the tileset graphic and its 7 autotiles |
+| ![Battle animation editor](docs/screenshots/battle-animations.png) | ![Quest editor](docs/screenshots/quests.png) |
+| **Battle animation editor** — frame timeline and live preview | **Quest editor** — ordered stages and the pause-menu log |
+| ![Content translator](docs/screenshots/translator.png) | ![Pokedex](docs/screenshots/pokedex.png) |
+| **Content translator** — every dialogue in the game, in one table | **Pokédex** — all 1025 species with sprites |
+-->
+
 Interface available in **English, Spanish, German, French, Portuguese and Italian** (language selector right in the sidebar; adding another language is just a translation file, no recompiling).
 
-## What's new
+## What's new in 1.2.1
+
+### Map editor
+
+**🧱 Tileset & autotile editor.** Change a tileset's image and its seven autotiles from inside the Studio. Adding a brand-new autotile is now just: drop its PNG into `Graphics/Autotiles` and pick it in the palette's **🧱 Tileset** dialog, with a live preview of each slot. Passage, priority and terrain-tag data is left untouched, and a graphic name that isn't actually on disk is refused before it can crash your game.
+
+**▭ Rectangle brush.** Drag to fill a whole area in one stroke — palette blocks tile across it, autotile borders are recalculated, and a single Ctrl+Z undoes the entire rectangle.
+
+**Move, copy and paste events.** Drag an event to another cell; Ctrl+C / Ctrl+V duplicate it as a new event with its own id. Neither one lands on a cell that is already taken.
+
+**🎁 "Give a Pokémon" event recipe.** Pick species and level, write what the NPC says, and the event is built for you with a self switch so the gift can only be taken once.
+
+**Cell coordinates on hover**, shown in the toolbar while you paint or place events.
+
+**💾 Optional map autosave — off by default.** Turn it on from the Home tab and choose the interval (30 s to 10 min). It never interrupts you: it skips saving mid-stroke, mid-drag and mid-paste, and if the map changed outside the Studio it warns and switches itself off instead of overwriting anything.
+
+### Everything else
 
 **🥊 Battle animation editor — the last RPG Maker XP holdout is gone.** Full visual editor for `Animations.rxdata`: frame-by-frame timeline, cell placement over the sprite sheet (position, zoom, angle, opacity, blend mode), live preview at RGSS-normal speed, duplicate/insert/delete frames and cells. This was the one thing that still forced you back into RPG Maker XP — not anymore.
 
@@ -35,6 +67,13 @@ Interface available in **English, Spanish, German, French, Portuguese and Italia
 
 **🌍 Regional forms, per map.** New in the alternate-forms system: assign which maps spawn wild Pokémon already wearing their Alolan/Galarian/Hisuian/Paldean form, by map ID, no scripting required.
 
+### Fixed
+
+- **Species added by extension plugins were invisible in the species browser.** Projects that add species the standard Essentials way (`pokemon_base_<plugin>.txt` / `pokemon_forms_<plugin>.txt`, e.g. the Generation 9 Pack) worked in the compiled game but not in the editor, which only read `PBS/pokemon.txt`. Those files are now merged into every listing, edits go back to the file the species came from, and the fix carries over to sprites, validation, fusion, regional forms and search. *(Reported by Ciegewell.)*
+- **The Poké Ball item event crashed the game.** The recipe emitted `pbItemBall(:POTION)`, which is a module method in this engine, so the call raised `NoMethodError` the moment the player touched the ball. It now emits `Kernel.pbItemBall(...)`, the same call the Essentials compiler generates. *(Reported by Daluck89.)*
+- **The Encounters tab didn't see maps created after the Studio was started.** It now re-reads the encounter data every time you open the tab — no restart. *(Reported by Daluck89.)*
+- **Holding Ctrl+V spammed the paste message** once per key repeat in the map editor. *(Reported by Daluck89.)*
+
 ## How is it different from the usual RPG Maker XP + Essentials?
 
 Essentials is a fantastic engine, but working with it means editing PBS files by hand in Notepad, using RPG Maker XP's map editor (three layers, no reliable undo), wrestling with Editor.exe for trainers and animations, and praying nothing gets corrupted. Reliqui Studio edits the exact same project files (PBS, maps, scripts), but:
@@ -46,6 +85,8 @@ Essentials is a fantastic engine, but working with it means editing PBS files by
 | Map connections by typing coordinates into `connections.txt` | Visual canvas: drag dozens of maps around, snap them edge to edge, and the connections write themselves |
 | Events through the RMXP editor | Full event editor + 1-click recipes: NPC, sign, shop, nurse, trainer, teleport with auto-return, harbor |
 | Battle animations through Editor.exe | Full visual animation editor: frame timeline, cell placement, live preview |
+| New autotiles only through RMXP's tileset dialog | Drop the PNG in `Graphics/Autotiles` and pick it in the Studio, with previews |
+| Moving an event = retyping its coordinates | Drag it across the map; Ctrl+C / Ctrl+V duplicate it |
 | Quest/flag tracking by hand with switches | Dedicated quest editor with ordered stages and a pause-menu log |
 | Translating your game's content | Built-in scanner + editor for every dialogue and event text in the game |
 | Forms and regional variants by writing Ruby handlers | Visual forms editor with sprite slots and per-map regional spawning |
