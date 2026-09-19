@@ -26,19 +26,7 @@ The installer includes the tool, a clean copy of the base engine and an overworl
 | [![Content translator](docs/screenshots/translator.png)](docs/screenshots/translator.png) | [![Map autosave](docs/screenshots/autosave.png)](docs/screenshots/autosave.png) |
 | **Content translator** — every map dialogue in one table | **Map autosave** — opt-in, with the interval you choose |
 
-<sub>The interface ships in six languages; these shots were taken in Spanish.</sub> at the end of the block.
-
-## Screenshots
-
-| | |
-|---|---|
-| ![Map editor](docs/screenshots/map-editor.png) | ![Tileset and autotile dialog](docs/screenshots/tileset-autotiles.png) |
-| **Map editor** — up to 8 layers, rectangle brush, autotile borders | **🧱 Tileset dialog** — swap the tileset graphic and its 7 autotiles |
-| ![Battle animation editor](docs/screenshots/battle-animations.png) | ![Quest editor](docs/screenshots/quests.png) |
-| **Battle animation editor** — frame timeline and live preview | **Quest editor** — ordered stages and the pause-menu log |
-| ![Content translator](docs/screenshots/translator.png) | ![Pokedex](docs/screenshots/pokedex.png) |
-| **Content translator** — every dialogue in the game, in one table | **Pokédex** — all 1025 species with sprites |
--->
+<sub>The interface ships in six languages; these shots were taken in Spanish.</sub>
 
 Interface available in **English, Spanish, German, French, Portuguese and Italian** (language selector right in the sidebar; adding another language is just a translation file, no recompiling).
 
