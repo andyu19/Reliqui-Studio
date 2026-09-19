@@ -13,9 +13,20 @@ The installer includes the tool, a clean copy of the base engine and an overworl
 
 📖 Guides and reference live in the [Wiki](../../wiki).
 
-<!--
-  TO PUBLISH THE SCREENSHOTS: drop the PNG files into docs/screenshots/ with these exact
-  names, then delete this line and the closing --> at the end of the block.
+## Screenshots
+
+| | |
+|---|---|
+| [![Map editor](docs/screenshots/map-editor.png)](docs/screenshots/map-editor.png) | [![Tileset and autotiles](docs/screenshots/tileset-autotiles.png)](docs/screenshots/tileset-autotiles.png) |
+| **Map editor** — layers, rectangle selection, live cell coordinates | **🧱 Tileset dialog** — swap the graphic and the seven autotile slots |
+| [![Event recipes](docs/screenshots/event-recipes.png)](docs/screenshots/event-recipes.png) | [![Map events](docs/screenshots/map-events.png)](docs/screenshots/map-events.png) |
+| **Event recipes** — one click builds a working event | **Events** — drag them around the map, Ctrl+C/Ctrl+V to duplicate |
+| [![Battle animation editor](docs/screenshots/battle-animations.png)](docs/screenshots/battle-animations.png) | [![Quest editor](docs/screenshots/quests.png)](docs/screenshots/quests.png) |
+| **Battle animation editor** — frames, cells, sounds and flashes | **Quest editor** — ordered stages and the pause-menu log |
+| [![Content translator](docs/screenshots/translator.png)](docs/screenshots/translator.png) | [![Map autosave](docs/screenshots/autosave.png)](docs/screenshots/autosave.png) |
+| **Content translator** — every map dialogue in one table | **Map autosave** — opt-in, with the interval you choose |
+
+<sub>The interface ships in six languages; these shots were taken in Spanish.</sub> at the end of the block.
 
 ## Screenshots
 
@@ -53,7 +64,7 @@ Interface available in **English, Spanish, German, French, Portuguese and Italia
 
 **🗒 Quest/mission editor.** A dedicated tab to build the pause-menu quest log: create quests with ordered stages, give each one an ID to reference from your events, and hide the whole log behind a switch until you're ready to ship it. No more juggling switches and variables by hand to track "is this quest active."
 
-**🌐 In-game content translator.** Scans every dialogue box and event text in the whole game and lists it in one searchable table where you edit the translation directly — separate from the tool's own interface language. This is the piece that was missing before: translating your *game's* content used to be entirely on you; now there's a built-in tool for it.
+**🌐 In-game content translator.** Scans the message boxes of every event on every map — 1200+ lines in a mid-sized project — and lists them in one searchable table where you type the translation and write it straight back where it came from. Separate from the tool's own interface language. Common events and strings inside scripts are not covered yet.
 
 **🐾 Follower Pokémon.** The first Pokémon in your party walks behind the player — on foot, on bike, across surf and dive, through teleports — with options for what happens if it's fainted, whether it can be talked to, and a switch to hide it. Sprites are copied into the project automatically when you turn it on.
 
@@ -88,7 +99,7 @@ Essentials is a fantastic engine, but working with it means editing PBS files by
 | New autotiles only through RMXP's tileset dialog | Drop the PNG in `Graphics/Autotiles` and pick it in the Studio, with previews |
 | Moving an event = retyping its coordinates | Drag it across the map; Ctrl+C / Ctrl+V duplicate it |
 | Quest/flag tracking by hand with switches | Dedicated quest editor with ordered stages and a pause-menu log |
-| Translating your game's content | Built-in scanner + editor for every dialogue and event text in the game |
+| Translating your game's content | Built-in scanner + editor for every map dialogue in the game |
 | Forms and regional variants by writing Ruby handlers | Visual forms editor with sprite slots and per-map regional spawning |
 | No version control | Built-in Git: a "Save version" button plus automatic backups before every save |
 | Sharing your game = copying the folder with everything exposed | Encrypted export (RGSSAD) + installer generator |
