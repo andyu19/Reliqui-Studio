@@ -13,11 +13,11 @@ The installer includes the tool, a clean copy of the base engine and an overworl
 
 📖 Guides and reference live in the [Wiki](../../wiki).
 
-## Screenshots
-
 <!--
   TO PUBLISH THE SCREENSHOTS: drop the PNG files into docs/screenshots/ with these exact
-  names and delete this comment's opening and closing markers. Nothing else to change.
+  names, then delete this line and the closing --> at the end of the block.
+
+## Screenshots
 
 | | |
 |---|---|
