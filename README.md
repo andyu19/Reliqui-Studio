@@ -121,6 +121,15 @@ A desktop app that edits the real files of your Essentials project — no weird 
 
 ℹ **Note on languages:** the tool's interface is fully translated (6 languages). The game content that ships with the BES base engine (moves, items, dialogue) is in Spanish — the built-in translator tab is there to help you localize your own project's content.
 
+## License and credits
+
+Reliqui Studio is **free to use, including for commercial games** — whatever you make with it is
+yours. Please share the [Releases page](../../releases) rather than re-uploading the installer
+elsewhere, so everyone gets the current version. Full terms in [LICENSE.md](LICENSE.md).
+
 Credits: Pokémon Essentials (Maruno and contributors), BES Spanish edition, mkxp-z runtime.
+
+Pokémon and all related names are trademarks of Nintendo, Creatures Inc. and GAME FREAK Inc. This is
+an unofficial, non-profit fan tool, not affiliated with or endorsed by them.
 
 https://buymeacoffee.com/andyu19
